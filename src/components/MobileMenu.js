@@ -30,7 +30,7 @@ function MobileMenu({
       </select>
       <Link
         className="mobileMenu__historyBtn"
-        to="/fullHistory"
+        to="/nodenotes/fullHistory"
         onClick={() => {
           setMenuClick(false);
         }}
