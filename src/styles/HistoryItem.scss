@@ -1,0 +1,11 @@
+@import "variables.scss";
+
+.historyItem {
+  width: 100%;
+  border: 1px solid black;
+  & > td {
+    border: 1px solid black;
+    text-align: justify;
+    padding: 0.25rem 0.5rem;
+  }
+}

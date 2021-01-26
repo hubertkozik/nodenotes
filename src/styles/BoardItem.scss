@@ -1,0 +1,140 @@
+@import "variables.scss";
+
+.boardItem {
+  display: inline-block;
+  width: 100%;
+  background: yellow;
+  //break-inside: avoid-column;
+  padding: 1rem 1.5rem !important;
+  box-shadow: 5px 5px 5px rgba(33, 33, 33, 0.7);
+  position: relative;
+  transition: all ease 0.3s;
+
+  // &:hover {
+  //   filter: brightness(80%);
+  //   transition: all 0.25s ease-in-out;
+  // }
+
+  &:hover > &__btns {
+    opacity: 1;
+  }
+
+  &__title {
+    font-size: $h3FontSize;
+    margin-top: 2.5rem;
+    max-height: $h1FontSize;
+    overflow: scroll;
+  }
+
+  &__dates {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: $h6FontSize;
+    text-align: right;
+  }
+
+  &__content {
+    margin-top: 1rem;
+    height: 62.5%;
+    text-align: justify;
+    overflow: scroll;
+  }
+
+  &__btns {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__editBtn {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
+    transition: all 0.25s ease-in-out;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid $secondMainColor;
+    color: $secondMainColor;
+    border-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+    filter: none;
+
+    &:hover {
+      cursor: pointer;
+      border-color: $secondHoverColor;
+      color: $secondHoverColor;
+    }
+  }
+
+  &__historyBtn {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.25s ease-in-out;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid $secondMainColor;
+    color: $secondMainColor;
+    border-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+    filter: none;
+
+    &:hover {
+      cursor: pointer;
+      border-color: $secondHoverColor;
+      color: $secondHoverColor;
+    }
+  }
+
+  &__deleteBtn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    transition: all 0.25s ease-in-out;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid $secondMainColor;
+    color: $secondMainColor;
+    border-radius: 1rem;
+    padding: 0.25rem 0.75rem;
+    filter: none;
+
+    &:hover {
+      cursor: pointer;
+      border-color: $secondHoverColor;
+      color: $secondHoverColor;
+    }
+  }
+
+  &:nth-child(even) {
+    transform: rotate(4deg);
+    //position: relative;
+    //top: 5px;
+    background-color: #cfc;
+  }
+
+  &:nth-child(3n) {
+    transform: rotate(-4deg);
+    //position: relative;
+    //top: -5px;
+    background-color: #ccf;
+  }
+
+  &:nth-child(1),
+  &:nth-child(5) {
+    transform: rotate(-5deg);
+    //position: relative;
+    //top: 10px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+    //position: relative;
+    z-index: 15;
+  }
+}

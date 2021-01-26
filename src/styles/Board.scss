@@ -1,0 +1,41 @@
+@import "variables.scss";
+
+.board {
+  width: 100%;
+  margin-top: 80px;
+  padding: 2rem 5%;
+  //column-count: 4;
+  //gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+
+  &__loading {
+    font-size: $h1FontSize;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .board {
+    column-count: 3;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .board {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .board {
+    column-count: 1;
+    width: calc(100% - 2rem);
+    padding: 0 1rem;
+  }
+}

@@ -1,0 +1,127 @@
+@import "variables.scss";
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  background: whitesmoke;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  padding: 0 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+
+  &__leftBtns {
+    display: flex;
+    margin-right: auto;
+  }
+
+  &__sortBtn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    outline: none;
+    background-color: $secondMainColor;
+    border-radius: 0.5rem;
+    font-size: $normalFontSize;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    text-align-last: center;
+
+    &:hover {
+      background-color: rgb(255, 151, 151);
+      cursor: pointer;
+    }
+  }
+
+  &__historyBtn {
+    padding: 0.75rem 1.5rem;
+    margin-left: 10%;
+    border: none;
+    outline: none;
+    background-color: rgb(120, 120, 255);
+    border-radius: 0.5rem;
+    font-size: $normalFontSize;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      background-color: rgb(156, 156, 255);
+      cursor: pointer;
+    }
+  }
+
+  &__logo {
+    //margin-left: auto;
+    color: black;
+    text-decoration: none;
+    font-size: $h2FontSize;
+    font-weight: bold;
+
+    &--violet {
+      color: violet;
+    }
+
+    &--teal {
+      color: teal;
+    }
+  }
+
+  &__button {
+    margin-left: auto;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    outline: none;
+    background-color: $green;
+    border-radius: 0.5rem;
+    font-size: $normalFontSize;
+    color: white;
+
+    &:hover {
+      background-color: $greenHover;
+      cursor: pointer;
+    }
+  }
+
+  &__menuIcon {
+    font-size: $h1FontSize !important;
+    display: none !important;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    grid-template-columns: 1fr 1fr;
+    z-index: 15;
+
+    &__logo {
+      margin-right: auto;
+    }
+
+    &__menuIcon {
+      display: block !important;
+      margin-left: auto;
+
+      &--white {
+        color: white;
+      }
+    }
+
+    &__leftBtns {
+      display: none;
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &--menuOpen {
+      background: inherit;
+    }
+  }
+}

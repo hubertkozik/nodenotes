@@ -1,0 +1,104 @@
+@import "variables.scss";
+
+.editNotePopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: scroll;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 20;
+
+  &__form {
+    background: $backgroundColor;
+    //height: 50%;
+    width: 50%;
+    padding: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: $h3FontSize;
+  }
+
+  &__label {
+    margin-top: 1rem;
+  }
+
+  &__noteTitle {
+    background: inherit;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+    font-size: $normalFontSize;
+  }
+
+  &__noteContent {
+    background: inherit;
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+    min-height: 10rem;
+    resize: none;
+    font-size: $normalFontSize;
+  }
+
+  &__btns {
+    margin-top: 2rem;
+    margin-left: auto;
+  }
+
+  &__cancelBtn {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    margin-right: 2rem;
+    border-radius: 0.75rem;
+    background-color: inherit;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $secondHoverColor;
+      color: white;
+    }
+  }
+
+  &__submitBtn {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    background-color: $green;
+    color: white;
+    border-radius: 0.75rem;
+
+    &:hover {
+      background-color: $greenHover;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .editNotePopup {
+    &__form {
+      width: 80%;
+    }
+
+    &__browseBtn {
+      width: 30%;
+    }
+  }
+}
