@@ -21,3 +21,12 @@ $normalFontSize: calc(14px + 0.1vw);
 .boldIt {
   font-weight: bold;
 }
+
+.disableScrollbars {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* Chrome/Safari/Webkit */
+  }
+}

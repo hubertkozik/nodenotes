@@ -47,12 +47,12 @@ function BoardItem({
         ref={boardItemRef}
         style={{ height: heightOfElement }}
       >
-        <h3 className="boardItem__title">{title}</h3>
+        <h3 className="boardItem__title disableScrollbars">{title}</h3>
         <div className="boardItem__dates">
           <p>Created: {created}</p>
           <p>Modified: {modified}</p>
         </div>
-        <p className="boardItem__content">{content}</p>
+        <p className="boardItem__content disableScrollbars">{content}</p>
         <div className="boardItem__btns">
           <button
             className="boardItem__editBtn"

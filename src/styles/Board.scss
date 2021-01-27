@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   grid-gap: 2rem;
+  place-items: center;
 
   &__loading {
     font-size: $h1FontSize;
@@ -20,22 +21,8 @@
   }
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 960px) {
   .board {
-    column-count: 3;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .board {
-    column-count: 2;
-  }
-}
-
-@media screen and (max-width: 560px) {
-  .board {
-    column-count: 1;
-    width: calc(100% - 2rem);
-    padding: 0 1rem;
+    padding: 2rem 0;
   }
 }

@@ -9,20 +9,21 @@
   max-width: 100%;
   display: grid;
   place-items: center;
-  overflow: scroll;
+
   background: rgba(0, 0, 0, 0.8);
   z-index: 15;
 
   &__form {
     background: $backgroundColor;
-    //height: 50%;
-    width: 80%;
+    //min-height: 50%;
+    min-width: 80%;
+    max-width: 95%;
     margin: 1rem 0;
-    padding: 3rem;
+    padding: 3%;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    place-items: center;
+    //place-items: center;
     position: relative;
   }
 
@@ -47,11 +48,16 @@
   &__title {
     margin-bottom: 1rem;
     font-size: $h3FontSize;
+    text-align: center;
+  }
+
+  &__tableWrapper {
+    overflow-x: auto;
   }
 
   &__table {
     //border: 1px solid black;
-    width: 100%;
+    margin-top: 1rem;
   }
 
   &__btns {

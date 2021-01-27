@@ -34,30 +34,32 @@ function HistoryNotePopup({ handleHistoryNotePopupShow, noteId }) {
           X
         </button>
         <h3 className="historyNotePopup__title">History of this note</h3>
-        <table className="historyNotePopup__table">
-          <thead>
-            <tr>
-              <th>Version</th>
-              <th>Title</th>
-              <th>Content</th>
-              <th>Created</th>
-              <th>Modified</th>
-            </tr>
-          </thead>
-          <tbody>
-            {historyOfNote &&
-              historyOfNote.note.map((oneNote) => (
-                <HistoryItem
-                  title={oneNote.title}
-                  content={oneNote.content}
-                  created={oneNote.created}
-                  modified={oneNote.modified}
-                  version={oneNote.version}
-                  key={oneNote._id}
-                />
-              ))}
-          </tbody>
-        </table>
+        <div className="historyNotePopup__tableWrapper">
+          <table className="historyNotePopup__table">
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Created</th>
+                <th>Modified</th>
+              </tr>
+            </thead>
+            <tbody>
+              {historyOfNote &&
+                historyOfNote.note.map((oneNote) => (
+                  <HistoryItem
+                    title={oneNote.title}
+                    content={oneNote.content}
+                    created={oneNote.created}
+                    modified={oneNote.modified}
+                    version={oneNote.version}
+                    key={oneNote._id}
+                  />
+                ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

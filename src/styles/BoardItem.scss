@@ -22,7 +22,7 @@
   &__title {
     font-size: $h3FontSize;
     margin-top: 2.5rem;
-    max-height: $h1FontSize;
+    max-height: calc(50px + 0.1vw);
     overflow: scroll;
   }
 
@@ -135,6 +135,12 @@
     transform: scale(1.1);
     box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
     //position: relative;
-    z-index: 15;
+    z-index: 10;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .boardItem {
+    width: 70%;
   }
 }

@@ -12,7 +12,7 @@ function MobileMenu({
 }) {
   const height = use100vh();
   return (
-    <div className="mobileMenu" style={{ height: height }}>
+    <div className="mobileMenu">
       <select
         className="mobileMenu__sortBtn"
         onChange={(e) => {
