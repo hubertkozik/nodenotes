@@ -28,7 +28,7 @@ There is no need to setup database for this project, because it is in cloud prov
 
 To run this project you have to do next steps:
 
-1. Download data from branch "ApplicationCode". You can do this by clicking download or cloning this repo.
+1. Download data from branches "BackEnd" and "FrontEnd" (FrontEnd is a directory 'client' in Backend branch). You can do this by clicking download or cloning this repo.
 2. Run command "npm i" to install all necessary packages and libraries.
 3. Now you have to run backend server. In main directory run command "npm start". You will see comunicats from nodemon.
 4. Now it's time to run frontend server. Go to "client" directory and run command "npm start". After a while you will see a communicat from React.
