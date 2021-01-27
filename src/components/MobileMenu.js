@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { use100vh } from "react-div-100vh";
 
 import "../styles/MobileMenu.scss";
 
@@ -10,7 +9,6 @@ function MobileMenu({
   sortBy,
   setSortBy,
 }) {
-  const height = use100vh();
   return (
     <div className="mobileMenu">
       <select
